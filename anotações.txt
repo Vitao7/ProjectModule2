@@ -1,0 +1,7 @@
+2 jogadores HP
+
+16 cartas aleatoriamente (8 p/ cada)
+
+nome
+dano
+chance de acerto 
