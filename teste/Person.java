@@ -2,23 +2,23 @@ package teste;
 
 public class Person {
 
-    private String name;
+    private String nome;
     private int hp;
 
-    public Person(String name, int hp) {
-        this.name = name;
+    public Person(String nome, int hp) {
+        this.nome = nome;
         this.hp = hp;
     }
 
-    public String getName() {
-        return name;
+    public String getnome() {
+        return nome;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNome(String nome){
+        this.nome = nome;
     }
 
-    public int getHp() {
+    public int getHp(){
         return hp;
     }
 
@@ -26,6 +26,9 @@ public class Person {
         this.hp = hp;
     }
 
-    Person jogador = new Person("Jogador", "100");
-
+    @Override
+    public String toString() {
+        return "nome= " + nome + '\n' +
+                "hp=" + hp;
+    }
 }
