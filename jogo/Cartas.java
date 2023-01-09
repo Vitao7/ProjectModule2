@@ -81,10 +81,8 @@ public class Cartas {
 
     @Override
     public String toString() {
-        return "Cartas{" +
-                "nome='" + nome + '\'' +
-                ", ataque='" + ataque + '\'' +
-                ", chanceAcerto='" + chanceAcerto + '\'' +
-                '}';
+        return "nome= " + nome + "\n" +
+                "ataque= " + ataque + '\n' +
+                "chanceAcerto= " + chanceAcerto + '\n';
     }
 }
