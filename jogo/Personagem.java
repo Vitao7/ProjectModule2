@@ -2,12 +2,14 @@ package jogo;
 
 public class Personagem {
 
-    private String nome;
-    private int hp;
+    Cartas cartas = new Cartas();
 
-    public Personagem(String nome, int hp) {
+    private String nome;
+    private double hp = 100;
+
+    public Personagem(String nome) {
         this.nome = nome;
-        this.hp = hp;
+
     }
 
     public String getnome() {
@@ -18,7 +20,7 @@ public class Personagem {
         this.nome = nome;
     }
 
-    public int getHp(){
+    public double getHp(){
         return hp;
     }
 
@@ -30,5 +32,15 @@ public class Personagem {
     public String toString() {
         return "nome= " + nome + '\n' +
                 "hp=" + hp;
+    }
+
+    public String dano(){
+        int ataque = Integer.parseInt(cartas.getAtaque());
+
+        if(cartas.CalcularChanceDeAcerto() == true){
+            hp = hp - ataque;
+            return "personagem ficou com " + hp + " de HP";
+        }
+        return "Personagem continua com" + hp + " de HP";
     }
 }
