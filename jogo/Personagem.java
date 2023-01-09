@@ -1,28 +1,34 @@
 package jogo;
 
 public class Personagem {
-    private String nome;
-    private int vida;
 
-    public Personagem(String nome, int vida) {
+    private String nome;
+    private int hp;
+
+    public Personagem(String nome, int hp) {
         this.nome = nome;
-        this.vida = vida;
+        this.hp = hp;
     }
 
-    public String getNome() {
+    public String getnome() {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public void setNome(String nome){
         this.nome = nome;
     }
 
-    public int getVida() {
-        return vida;
+    public int getHp(){
+        return hp;
     }
 
-    public void setVida(int vida) {
-        this.vida = vida;
+    public void setHp(int hp) {
+        this.hp = hp;
     }
-    
+
+    @Override
+    public String toString() {
+        return "nome= " + nome + '\n' +
+                "hp=" + hp;
+    }
 }

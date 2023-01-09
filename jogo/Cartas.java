@@ -9,8 +9,8 @@ public class Cartas {
 
 //    private final int quantidadeDeCartas = 16;
     private String nome;
-    private int ataque;
-    private int chanceAcerto;
+    private String ataque;
+    private String chanceAcerto;
 
 
 
@@ -24,49 +24,54 @@ public class Cartas {
         this.nome = nome;
     }
 
-    public int getAtaque() {
+    public String getAtaque() {
         return ataque;
     }
 
-    public void setAtaque(int ataque) {
+    public void setAtaque(String ataque) {
         this.ataque = ataque;
     }
 
-    public int getChanceAcerto() {
+    public String getChanceAcerto() {
         return chanceAcerto;
     }
 
-    public void setChanceAcerto(int chanceAcerto) {
+    public void setChanceAcerto(String chanceAcerto) {
         this.chanceAcerto = chanceAcerto;
     }
 
-    public void carta_1(){
+    public String carta_1(){
         this.nome = "ravena";
-        this.ataque = 20;
-        this.chanceAcerto = 3;
+        this.ataque = "20";
+        this.chanceAcerto = "3";
+        return toString();
     }
 
-    public void carta_2(){
+    public String carta_2(){
         this.nome = "tronco";
-        this.ataque = 10;
-        this.chanceAcerto = 5;
+        this.ataque = "10";
+        this.chanceAcerto = "5";
+        return toString();
     }
 
-    public void carta_3(){
+    public String carta_3(){
         this.nome = "esqueleto";
-        this.ataque = 5;
-        this.chanceAcerto = 10;
+        this.ataque = "5";
+        this.chanceAcerto = "10";
+        return toString();
     }
 
-    public void carta_4(){
+    public String carta_4(){
         this.nome = "dragão";
-        this.ataque = 15;
-        this.chanceAcerto = 7;
+        this.ataque = "15";
+        this.chanceAcerto = "7";
+        return toString();
     }
 
     public boolean CalcularChanceDeAcerto(){
+        int acerto = Integer.parseInt(chanceAcerto);
         int dado = chance.nextInt(0, 11);
-        int calcular = chanceAcerto + dado;
+        int calcular = acerto + dado;
         if(calcular>=10){
             return true;
         }
@@ -74,6 +79,12 @@ public class Cartas {
         return false;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Cartas{" +
+                "nome='" + nome + '\'' +
+                ", ataque='" + ataque + '\'' +
+                ", chanceAcerto='" + chanceAcerto + '\'' +
+                '}';
+    }
 }

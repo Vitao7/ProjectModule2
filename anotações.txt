@@ -5,3 +5,5 @@
 nome
 dano
 chance de acerto 
+
+
