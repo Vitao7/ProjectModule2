@@ -6,13 +6,12 @@ import java.util.Random;
 public class Cartas {
 
     Random chance = new Random();
+    Personagem personagem = new Personagem("Jogador1");
 
 //    private final int quantidadeDeCartas = 16;
     private String nome;
     private String ataque;
     private String chanceAcerto;
-
-
 
 
 
@@ -69,9 +68,9 @@ public class Cartas {
     }
 
     public boolean CalcularChanceDeAcerto(){
-        int acerto = Integer.parseInt(chanceAcerto);
-        int dado = chance.nextInt(0, 11);
-        int calcular = acerto + dado;
+        double acerto = Integer.parseInt(chanceAcerto);
+        double dado = chance.nextInt(0, 11);
+        double calcular = acerto + dado;
         if(calcular>=10){
             return true;
         }
@@ -87,4 +86,14 @@ public class Cartas {
                 ", chanceAcerto='" + chanceAcerto + '\'' +
                 '}';
     }
+
+//    public double ataqueCarta(){
+//        if(CalcularChanceDeAcerto() == true){
+//            double ataque = Integer.parseInt(getAtaque());
+//            personagem.getHp() = personagem.getHp();
+//        }
+//        return ataqueCarta();
+//    }
+
+
 }
