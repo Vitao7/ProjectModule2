@@ -35,10 +35,9 @@ public class Personagem {
     }
 
     public String dano(){
-        int ataque = Integer.parseInt(cartas.getAtaque());
 
         if(cartas.CalcularChanceDeAcerto() == true){
-            hp = hp - ataque;
+            hp = hp - cartas.getAtaque();
             return "personagem ficou com " + hp + " de HP";
         }
         return "Personagem continua com" + hp + " de HP";
