@@ -1,5 +1,7 @@
 package jogo;
 
+import teste.Personagem;
+
 import java.util.Random;
 
 public class Cartas {

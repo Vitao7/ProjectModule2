@@ -4,6 +4,14 @@
 
 nome
 dano
-chance de acerto 
+chance de acerto
+
+//
+
+Sorteio das Cartas;
+
+Tirar a vida da torre;
+
+
 
 

@@ -1,4 +1,6 @@
-package jogo;
+package teste;
+
+import jogo.Cartas;
 
 public class Personagem {
 
@@ -9,14 +11,13 @@ public class Personagem {
 
     public Personagem(String nome) {
         this.nome = nome;
-
     }
 
-    public String getnome() {
+    public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome){
+    public void setNome(String nome) {
         this.nome = nome;
     }
 
@@ -30,11 +31,10 @@ public class Personagem {
 
     @Override
     public String toString() {
-        return "nome= " + nome + '\n' +
-                "hp=" + hp;
+        return nome="" + nome;
     }
 
-//    public String dano(){
+    //    public String dano(){
 //
 //        if(cartas.CalcularChanceDeAcerto() == true){
 //            hp = hp - cartas.getAtaque();

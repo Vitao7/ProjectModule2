@@ -69,10 +69,10 @@ public class Cts {
 
     //Escolher a carta
 
-    public int escolherCarta(){
-        double dadoCarta = random.nextDouble(0,3);
-        if()
-    }
+//    public int escolherCarta(){
+//        double dadoCarta = random.nextDouble(0,3);
+//        if()
+//    }
 
 
     //Chance de acerto das cartas

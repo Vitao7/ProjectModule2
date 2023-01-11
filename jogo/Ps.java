@@ -1,7 +1,7 @@
 package jogo;
 
 public class Ps {
-    private String nome;
+     private String nome;
 
     public Ps(String nome) {
         this.nome = nome;
@@ -17,6 +17,7 @@ public class Ps {
 
     @Override
     public String toString() {
-        return "nome='" + nome;
+        return "nome = " + nome;
     }
 }
+
