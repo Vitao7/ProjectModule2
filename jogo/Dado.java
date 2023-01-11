@@ -6,7 +6,7 @@ public class Dado {
     Random dado = new Random();
 
     public int dadoSortearCarta(){
-        int dadoSorteioCarta = dado.nextInt(0, 12 + 1);
+        int dadoSorteioCarta = dado.nextInt(0, 12);
 
         return dadoSorteioCarta;
     }

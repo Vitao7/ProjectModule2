@@ -40,9 +40,7 @@ public enum AtributosDasCartas {
 
     @Override
     public String toString() {
-        return "Nome=" + nome + "\n" +
-                "Ataque=" + ataque + "\n" +
-                "ChanceDeAcerto=" + chanceDeAcerto + "\n";
+        return nome ;
 
     }
 
