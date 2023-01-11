@@ -4,12 +4,15 @@ import utils.Leitor;
 
 public class Personagem {
 
+//    Objeto
     Dado dado = new Dado();
     Leitor leitor = new Leitor();
 
+//    Atributos
      private String nome;
      private int hp = 100;
 
+//     Construtor
     public Personagem(String nome) {
         this.nome = nome;
     }
@@ -17,6 +20,7 @@ public class Personagem {
         this.nome = nome;
     }
 
+//    Get / Set
     public String getNome() {
         return nome;
     }
@@ -40,20 +44,21 @@ public class Personagem {
         setNome(leitor.lerString("Digite o nome do Jogador 1: "));
         System.out.println(getNome());
         for (int i = 0; i<6; i++ ){
-            System.out.println(AtributosDasCartas.values()[dado.dadoSortearCarta()]);
+            int dadoNumero = dado.dadoSortearCarta();
+            System.out.println(Cartas.values()[dadoNumero] +" = " + dadoNumero );
         }
-//        return personagem1();
     }
 
     public void personagem2(){
         setNome(leitor.lerString("Digite o nome do Jogador 2: "));
         System.out.println(getNome());
         for (int i = 0; i<6; i++ ){
-            System.out.println(AtributosDasCartas.values()[dado.dadoSortearCarta()]);
+            int dadoNumero = dado.dadoSortearCarta();
+            System.out.println(Cartas.values()[dadoNumero] +" = " + dadoNumero );
         }
-//        return personagem2();
     }
 
+//    ToString
     @Override
     public String toString() {
         return "nome = " + nome;

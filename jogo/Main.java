@@ -7,12 +7,18 @@ public class Main {
 
         Leitor leitor = new Leitor();
         Personagem personagem = new Personagem();
+        SelecionarEAtaque cartas = new SelecionarEAtaque();
 
         personagem.personagem1();
         System.out.println("");
         personagem.personagem2();
 
-//        System.out.println(leitor.lerString("Digite sua carta"));
+        System.out.println();
+
+        while(personagem.getHp()>0){
+            cartas.calcularChanceDeAcerto();
+        }
+
 
         System.out.printf("%f");
 
