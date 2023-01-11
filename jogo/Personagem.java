@@ -1,9 +1,10 @@
 package jogo;
 
-public class Ps {
+public class Personagem {
      private String nome;
+     private int hp = 100;
 
-    public Ps(String nome) {
+    public Personagem(String nome) {
         this.nome = nome;
     }
 
@@ -15,9 +16,19 @@ public class Ps {
         this.nome = nome;
     }
 
+    public int getHp() {
+        return hp;
+    }
+
+    public void setHp(int hp) {
+        this.hp = hp;
+    }
+
     @Override
     public String toString() {
         return "nome = " + nome;
     }
+
+
 }
 

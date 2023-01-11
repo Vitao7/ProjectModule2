@@ -1,20 +1,18 @@
 package jogo;
 
-import teste.Personagem;
-
 public class Main {
     public static void main(String[] args) {
 
-        Ps personagem1 = new Ps("Vitor");
-        Ps personagem2 = new Ps("Fernando");
+        Personagem personagem1 = new Personagem("Vitor");
+        Personagem personagem2 = new Personagem("Fernando");
+        Dado dado = new Dado();
 
         System.out.println(personagem1);
         System.out.println(personagem2);
 
+        for (int i = 0; i<7; i++ ){
+            System.out.println(AtributosDasCartas.values()[dado.dadoSortearCarta()]);        }
 
-//        for (int i = 0; i<7; i++ ){
-//            System.out.println(AtributosDasCartas.values()[dado.dadoSortearCarta()]);
-//        }
-//
     }
+
 }
