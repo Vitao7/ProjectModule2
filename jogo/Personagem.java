@@ -34,12 +34,12 @@ public class Personagem {
                 "hp=" + hp;
     }
 
-    public String dano(){
-
-        if(cartas.CalcularChanceDeAcerto() == true){
-            hp = hp - cartas.getAtaque();
-            return "personagem ficou com " + hp + " de HP";
-        }
-        return "Personagem continua com" + hp + " de HP";
-    }
+//    public String dano(){
+//
+//        if(cartas.CalcularChanceDeAcerto() == true){
+//            hp = hp - cartas.getAtaque();
+//            return "personagem ficou com " + hp + " de HP";
+//        }
+//        return "Personagem continua com" + hp + " de HP";
+//    }
 }

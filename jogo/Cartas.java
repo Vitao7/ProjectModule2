@@ -6,6 +6,7 @@ public class Cartas {
 
     Random chance = new Random();
     Personagem personagem = new Personagem("Jogador1");
+    AtributosDasCartas atributosDasCartas;
 
     private String nome;
     private double ataque;
@@ -39,8 +40,8 @@ public class Cartas {
         return "nome= " + nome + "\n" +
                 "ataque= " + ataque + '\n' +
                 "chanceAcerto= " + chanceDeAcerto + '\n';
+
+
+
     }
-
-
-
 }
