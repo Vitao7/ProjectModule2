@@ -14,4 +14,21 @@ Tirar a vida da torre;
 
 
 
+-Fazer um metodo, para selecionar a carta;
+(A carta vai puxar o metodo (CHANCE DE ACERTO);
+
+E essa carta vai dar o dano na torre;
+
+
+
+
+
+
+
+
+
+- SEM REPETIÇÕES DE CARTAS;
+
+
+
 

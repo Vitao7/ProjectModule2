@@ -14,6 +14,8 @@ public class Main {
 
 //        System.out.println(leitor.lerString("Digite sua carta"));
 
+        System.out.printf("%f");
+
     }
 
 }
