@@ -11,23 +11,20 @@ public class SelecionarEAtaque {
 
 //    Metodos
 
-    public double selecionarCarta(){
+    public int selecionarCarta(){
         int numeroDaCarta = leitor.lerInteiro("Digite o numero da carta:");
         System.out.println(Cartas.values()[numeroDaCarta]);
-        System.out.println();
-        return Cartas.values()[numeroDaCarta].getChanceDeAcerto() ;
+//        System.out.println();
+        return  numeroDaCarta;
     }
     public boolean calcularChanceDeAcerto(){
-        selecionarCarta();
-        double calcular = selecionarCarta() + dado.dadoChance();
+        int calcular = (int) Cartas.values()[selecionarCarta()].getChanceDeAcerto() + dado.dadoChance();
         if(calcular>=10){
-            System.out.printf("A carta acertou com %f de chance.", calcular);
-            System.out.println(selecionarCarta());
+            System.out.printf("%s acertou com %d de chance.",Cartas.values()[selecionarCarta()].getNome(), calcular);
             return true;
         }
         else {
-            System.out.printf("A carta não acertou com %f de chance", calcular);
-
+            System.out.printf("%s não acertou com %d de chance",Cartas.values()[selecionarCarta()].getNome(),calcular);
             return false;
         }
     }

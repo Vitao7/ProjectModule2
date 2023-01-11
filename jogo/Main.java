@@ -9,9 +9,10 @@ public class Main {
         Personagem personagem = new Personagem();
         SelecionarEAtaque cartas = new SelecionarEAtaque();
 
-        personagem.personagem1();
-        System.out.println("");
-        personagem.personagem2();
+//        Problema a resolver: Filtrar cartas de cada jogador
+//        personagem.personagem1();
+//        System.out.println("");
+//        personagem.personagem2();
 
         System.out.println();
 
