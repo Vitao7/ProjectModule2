@@ -29,6 +29,8 @@ E essa carta vai dar o dano na torre;
 
 - SEM REPETIÇÕES DE CARTAS;
 
+- Parametro número da carta
+
 
 
 

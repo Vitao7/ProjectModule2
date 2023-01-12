@@ -17,11 +17,11 @@ public class Main {
         System.out.println();
 
         while(personagem.getHp()>0){
-            cartas.calcularChanceDeAcerto();
+            cartas.ataqueDaCarta();
         }
 
 
-        System.out.printf("%f");
+//        System.out.printf("%f");
 
     }
 
