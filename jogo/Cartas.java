@@ -22,11 +22,11 @@ public enum Cartas {
 
 //    Atributos
     private String nome;
-    private double ataque;
-    private double chanceDeAcerto;
+    private int ataque;
+    private int chanceDeAcerto;
 
 //    Construtor
-    Cartas(String nome, double ataque, double chanceDeAcerto) {
+    Cartas(String nome, int ataque, int chanceDeAcerto) {
         this.nome = nome;
         this.ataque = ataque;
         this.chanceDeAcerto = chanceDeAcerto;
@@ -37,33 +37,33 @@ public enum Cartas {
         return nome;
     }
 
-    public double getAtaque() {
+    public int getAtaque() {
         return ataque;
     }
 
-    public double getChanceDeAcerto() {
+    public int getChanceDeAcerto() {
         return chanceDeAcerto;
     }
 
 
 
 //    Metodos
-    public void sortear(){
-    ArrayList<Cartas> listaCarta = new ArrayList<>();
-        listaCarta.add(Cartas.FALCAO);
-        listaCarta.add(Cartas.REI);
-        listaCarta.add(Cartas.FLECHA);
-        listaCarta.add(Cartas.ARQUEIRO);
-        listaCarta.add(Cartas.MAGO);
-        listaCarta.add(Cartas.GOLEM);
-        listaCarta.add(Cartas.PRINCIPE);
-        listaCarta.add(Cartas.PRINCESA);
-        listaCarta.add(Cartas.GUERREIRO);
-        listaCarta.add(Cartas.BRUXA);
-        listaCarta.add(Cartas.CATAPUTA);
-        listaCarta.add(Cartas.TRONCO);
-
-    }
+//    public void sortear(){
+//    ArrayList<Cartas> listaCarta = new ArrayList<>();
+//        listaCarta.add(Cartas.FALCAO);
+//        listaCarta.add(Cartas.REI);
+//        listaCarta.add(Cartas.FLECHA);
+//        listaCarta.add(Cartas.ARQUEIRO);
+//        listaCarta.add(Cartas.MAGO);
+//        listaCarta.add(Cartas.GOLEM);
+//        listaCarta.add(Cartas.PRINCIPE);
+//        listaCarta.add(Cartas.PRINCESA);
+//        listaCarta.add(Cartas.GUERREIRO);
+//        listaCarta.add(Cartas.BRUXA);
+//        listaCarta.add(Cartas.CATAPUTA);
+//        listaCarta.add(Cartas.TRONCO);
+//
+//    }
 
 //    ToString
     @Override
