@@ -31,12 +31,12 @@ public class SelecionarEAtaque {
         }
     }
 
-    public void ataqueDaCarta(){
-        if (calcularChanceDeAcerto() == true){
-            personagem.setHp(personagem.getHp() - (int) Cartas.values()[numeroDaCarta].getAtaque());
-            System.out.println();
-        }
-    }
+//    public void ataqueDaCarta(){
+//        if (calcularChanceDeAcerto() == true){
+//            personagem.setHp(personagem.getHp() - (int) Cartas.values()[numeroDaCarta].getAtaque());
+//            System.out.println();
+//        }
+//    }
 
 
 }

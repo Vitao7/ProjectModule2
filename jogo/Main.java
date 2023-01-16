@@ -16,9 +16,9 @@ public class Main {
 
         System.out.println();
 
-        while(personagem.getHp()>0){
-            cartas.ataqueDaCarta();
-        }
+//        while(personagem.getHp()>0){
+//            cartas.ataqueDaCarta();
+//        }
 
 
 //        System.out.printf("%f");

@@ -1,23 +1,28 @@
-2 jogadores HP
+2 jogadores HP -v
 
-16 cartas aleatoriamente (8 p/ cada)
+16 cartas aleatoriamente (8 p/ cada) - v
 
-nome
-dano
-chance de acerto
+nome - v
+dano -x
+chance de acerto -v
 
 //
 
-Sorteio das Cartas;
+Sorteio das Cartas; - v
 
-Tirar a vida da torre;
+Tirar a vida da torre; - x
 
 
 
--Fazer um metodo, para selecionar a carta;
+-Fazer um metodo, para selecionar a carta; -v
 (A carta vai puxar o metodo (CHANCE DE ACERTO);
 
 E essa carta vai dar o dano na torre;
+
+
+
+
+
 
 
 

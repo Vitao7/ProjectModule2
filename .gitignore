@@ -7,6 +7,6 @@ out
  *.jar
  *.war
  *.ear
- *iml
+ *.iml
  .nar
  hs_err_pid
