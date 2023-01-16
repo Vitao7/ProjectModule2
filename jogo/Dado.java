@@ -7,8 +7,6 @@ public class Dado {
 
     public int dadoSortearCarta(){
         int dadoSorteioCarta = dado.nextInt(1, 13);
-        int dadoChance = dado.nextInt(0,11);
-
         return dadoSorteioCarta;
     }
     public int dadoChance(){

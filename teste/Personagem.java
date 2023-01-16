@@ -1,10 +1,6 @@
 package teste;
 
-import jogo.SelecionarEAtaque;
-
 public class Personagem {
-
-    SelecionarEAtaque cartas = new SelecionarEAtaque();
 
     private String nome;
     private double hp = 100;

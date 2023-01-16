@@ -7,22 +7,17 @@ public class Main {
 
         Leitor leitor = new Leitor();
         Personagem personagem = new Personagem();
-        SelecionarEAtaque cartas = new SelecionarEAtaque();
+        SlcAtk slcAtk = new SlcAtk();
 
 //        Problema a resolver: Filtrar cartas de cada jogador
-//        personagem.personagem1();
+        personagem.personagem1();
 //        System.out.println("");
 //        personagem.personagem2();
 
         System.out.println();
 
-        while(personagem.getHp()>0){
-            cartas.ataqueDaCarta();
-        }
-
-
-//        System.out.printf("%f");
-
+//        while(personagem.getHp()>0){
+//            slcAtk.calcularAtaque();
+//        }
     }
-
 }

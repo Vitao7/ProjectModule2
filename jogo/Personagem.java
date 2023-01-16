@@ -8,6 +8,7 @@ public class Personagem {
     Dado dado = new Dado();
     Leitor leitor = new Leitor();
 
+
 //    Atributos
      private String nome;
      private int hp = 100;
@@ -56,6 +57,12 @@ public class Personagem {
             int dadoNumero = dado.dadoSortearCarta();
             System.out.println(Cartas.values()[dadoNumero] +" = " + dadoNumero );
         }
+    }
+
+    public int receberDano(int dano){
+        hp -= dano;
+
+        return hp;
     }
 
 //    ToString
