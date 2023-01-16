@@ -1,14 +1,18 @@
 package principal;
 
+import utils.Leitor;
+
 public class Main {
     public static void main(String[] args) {
 
-        Dado dado = new Dado();
-        Personagem personagem = new Personagem();
+        Leitor leitor = new Leitor();
+        Deck deck = new Deck();
+        String nomePersonagem = leitor.lerString("Digite seu nome");
 
-//        System.out.println(Cartas.FALCAO); (IMPRIME O NOME DA CARTA)
-        personagem.personagem1();
-//        System.out.println(dado.dadoChanceAcerto());  (IMPRIME O NUMERO DO DADO)
+        Personagem personagem1 = new Personagem(nomePersonagem, deck.sortearMao());
+        System.out.println("===");
+        Personagem personagem2 = new Personagem(nomePersonagem, deck.sortearMao());
+
 
     }
 }

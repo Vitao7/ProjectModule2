@@ -2,11 +2,10 @@ package principal;
 
 import utils.Leitor;
 
-public enum Cartas {
+public enum Carta {
 
     //Declaração de cada carta;
 
-    VAZIO("vazio",0,0),
     FALCAO("FALCÃO", 5, 9),
     REI("REI", 100, 0),
     FLECHA("FLECHA", 20, 5),
@@ -48,7 +47,7 @@ public enum Cartas {
     }
 
     //Construtor;
-    Cartas(String nome, int ataque, int cancheAcerto) {
+    Carta(String nome, int ataque, int cancheAcerto) {
         this.nome = nome;
         this.ataque = ataque;
         this.cancheAcerto = cancheAcerto;
@@ -56,9 +55,32 @@ public enum Cartas {
 
     //Metodo para selecionar a carta;
 
+    public int selecionarCarta(){
+        numeroCarta = leitor.lerInteiro("Digite o numero da carta: ");
+        return numeroCarta;
+    }
 
 
+    public boolean calcularChanceAcerto(){
+        int chanceDeAcerto = getCancheAcerto() + dado.dadoChanceAcerto();
+        if (chanceDeAcerto >= 10){
+            System.out.println("true");
+            return true;
+        }
+        return false;
+    }
 
+    public void calcularAtaque(){
+        if (calcularChanceAcerto()){
+            int teste = personagem.receberDano(Carta.values()[numeroCarta].getAtaque());
+            System.out.println(teste);
+            System.out.println("deu dano");
+        }
+        else {
+            System.out.println("não deu");
+        }
+
+    }
 
     //toString retorna o nome da carta
 

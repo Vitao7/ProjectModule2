@@ -2,10 +2,13 @@ package principal;
 
 import utils.Leitor;
 
+import java.util.List;
+
 public class Personagem {
 
     Dado dado = new Dado();
     Leitor leitor = new Leitor();
+    List<Carta> mao;
 
 //    Atributos personagem
 
@@ -15,8 +18,13 @@ public class Personagem {
 
 //    Construtor personagem
 
-    public Personagem(String nome) {
+    public Personagem(String nome, List<Carta> mao) {
         this.nome = nome;
+        this.mao = mao;
+
+        for(Carta carta : mao) {
+            System.out.println(carta);
+        }
     }
     public Personagem() {
         this.nome = nome;
@@ -44,23 +52,23 @@ public class Personagem {
 
     //Metodos
 
-    public void personagem1(){
+    public void distribuirCarta(){
         setNome(leitor.lerString("Digite o nome do Jogador 1: "));
         System.out.printf("Jogador %s\n", getNome());
         for(int i = 0; i < 6; i++){
             int dadoNumero = dado.dadoSortearCarta();
-            System.out.println(Cartas.values()[dadoNumero] + "=" + dadoNumero);
+            System.out.println(Carta.values()[dadoNumero] + "=" + dadoNumero);
         }
     }
 
-    public void personagem2(){
-        setNome(leitor.lerString("Digite o nome do Jogador 2: "));
-        System.out.printf("Jogador %s\n", getNome());
-        for(int i = 0; i < 6; i++){
-            int dadoNumero = dado.dadoSortearCarta();
-            System.out.println(Cartas.values()[dadoNumero] + "=" + dadoNumero);
-        }
-    }
+//    public void personagem2(){
+//        setNome(leitor.lerString("Digite o nome do Jogador 2: "));
+//        System.out.printf("Jogador %s\n", getNome());
+//        for(int i = 0; i < 6; i++){
+//            int dadoNumero = dado.dadoSortearCarta();
+//            System.out.println(Cartas.values()[dadoNumero] + "=" + dadoNumero);
+//        }
+//    }
 
     public int receberDano(int dano){
         hp -= dano;
