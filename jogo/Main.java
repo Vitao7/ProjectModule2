@@ -8,12 +8,17 @@ public class Main {
         Leitor leitor = new Leitor();
         Carta carta;
         Personagem personagem = new Personagem();
+        Deck deck = new Deck();
+//        Painel painel = new Painel();
 
-        personagem.nomearPersonagem();
+        deck.sortearCartas();
 
 
 
-        carta.distribuirCartas();
+
+
+
+//        carta.distribuirCartas();
 
 
 

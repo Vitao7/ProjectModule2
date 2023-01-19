@@ -21,18 +21,12 @@ public enum Carta {
     TRONCO("TRONCO",35,3),
     ;
 
-//
-    Dado dado = new Dado();
-    Leitor leitor = new Leitor();
-    Personagem personagem = new Personagem();
-
     //Atributos das cartas;
-    private int cartaPorJogador = 6;
     private  String nome;
     private int ataque;
     private int cancheAcerto;
 
-    private int numeroCarta;
+
 
     //Get / Set das cartas;
 
@@ -49,54 +43,12 @@ public enum Carta {
         return cancheAcerto;
     }
 
-    public int getCartaPorJogador() {
-        return cartaPorJogador;
-    }
 
     //Construtor;
     Carta(String nome, int ataque, int cancheAcerto) {
         this.nome = nome;
         this.ataque = ataque;
         this.cancheAcerto = cancheAcerto;
-    }
-
-    //Metodo para selecionar a carta;
-
-    public void distribuirCartas(){
-        for (int i = 0; i<personagem.getQuantidadeDePersonagem(); i++){
-            System.out.printf("Jogador %s recebeu as seguintes cartas:\n\n", personagem.getPersonagem()[i]);
-            for (int j = 0; j<6; j++){
-                int numeroDaCarta = dado.dadoSortearCarta();
-                System.out.println(Carta.values()[numeroDaCarta].getNome() + " = " + numeroDaCarta);
-            }
-        }
-    }
-
-    public int selecionarCarta(){
-        numeroCarta = leitor.lerInteiro("Digite o numero da carta: ");
-        return numeroCarta;
-    }
-
-
-    public boolean calcularChanceAcerto(){
-        int chanceDeAcerto = getCancheAcerto() + dado.dadoChanceAcerto();
-        if (chanceDeAcerto >= 10){
-            System.out.println("true");
-            return true;
-        }
-        return false;
-    }
-
-    public void calcularAtaque(){
-        if (calcularChanceAcerto()){
-            int teste = personagem.receberDano(Carta.values()[numeroCarta].getAtaque());
-            System.out.println(teste);
-            System.out.println("deu dano");
-        }
-        else {
-            System.out.println("não deu");
-        }
-
     }
 
     //toString retorna o nome da carta
