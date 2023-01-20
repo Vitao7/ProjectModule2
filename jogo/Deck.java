@@ -2,14 +2,10 @@ package jogo;
 
 import utils.Leitor;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
 public class Deck {
-    Personagem personagem = new Personagem();
     Dado dado = new Dado();
     Leitor leitor = new Leitor();
+    Personagem personagem = new Personagem();
     Carta carta;
 
 //    Atributos
@@ -19,34 +15,39 @@ public class Deck {
     private int numeroCarta;
     private String[] cartasDoJogador = new String [quantidadeDeCartas];
 
+    public String[] getCartasDoJogador() {
+        return cartasDoJogador;
+    }
 
     public void sortearCartas(){
         for (int i = 0; i<quantidadeDeCartas; i++){
             cartasDoJogador[i] = Carta.values()[dado.dadoSortearCarta()].getNome();
-            System.out.printf("%s", cartasDoJogador[i]);
+            System.out.printf("%s\n", cartasDoJogador[i]);
         }
+    }
+
+    public void selecionarCarta(){
+        numeroCarta = leitor.lerInteiro("Digite o numero da carta para selecionar:");
     }
 
 
 
+    public boolean calcularChanceAcerto(){
+        int chanceDeAcerto = Carta.values()[1].getCancheAcerto() + dado.dadoChanceAcerto();
+        if (chanceDeAcerto >= 10){
+            System.out.println("true");
+            return true;
+        }
+        return false;
+    }
+    public void calcularAtaque(){
+        if (calcularChanceAcerto()){
+            int teste = personagem.receberDano(Carta.values()[numeroCarta].getAtaque());
 
-//    public boolean calcularChanceAcerto(){
-//        int chanceDeAcerto = Carta.getCancheAcerto() + dado.dadoChanceAcerto();
-//        if (chanceDeAcerto >= 10){
-//            System.out.println("true");
-//            return true;
-//        }
-//        return false;
-//    }
-//    public void calcularAtaque(){
-//        if (calcularChanceAcerto()){
-//            int teste = personagem.receberDano(Carta.values()[numeroCarta].getAtaque());
-//            System.out.println(teste);
-//            System.out.println("deu dano");
-//        }
-//        else {
-//            System.out.println("não deu");
-//        }
-//
-//    }
+        }
+        else {
+            System.out.println("não deu");
+        }
+
+    }
 }

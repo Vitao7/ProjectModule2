@@ -1,16 +1,8 @@
 package jogo;
 
-import utils.Leitor;
-
-import java.util.List;
-
 public class Personagem {
 
-    Dado dado = new Dado();
-    Leitor leitor = new Leitor();
-    Carta carta;
-    Deck deck = new Deck();
-    List<Carta> mao;
+//    Deck deck = new Deck();
 
 //    Atributos personagem
     private  int hp = 100;
@@ -31,13 +23,18 @@ public class Personagem {
     public String[] getPersonagem() {
         return personagem;
     }
-    //Metodos
+
+//    Metodos
 
     public void nomearPersonagem(){
-        for (int i = 0; i<quantidadeDePersonagem; i++){
-            personagem[i] = leitor.lerString("Digite o nome do jogador " + (i+1));
-        }
+        personagem[0] = "TORRE AZUL";
+        personagem[1] = "TORRE VERMELHA";
 
+
+    }
+
+    public void distribuirDeck(){
+//        personagem[0] = deck.getCartasDoJogador()[0];
     }
 
 

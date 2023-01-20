@@ -2,7 +2,7 @@ package principal;
 
 import java.util.Random;
 
-public class Dado {
+public class Dado1 {
 
     Random random = new Random();
 

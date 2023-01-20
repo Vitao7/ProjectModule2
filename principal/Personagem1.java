@@ -4,11 +4,11 @@ import utils.Leitor;
 
 import java.util.List;
 
-public class Personagem {
+public class Personagem1 {
 
-    Dado dado = new Dado();
+    Dado1 dado = new Dado1();
     Leitor leitor = new Leitor();
-    List<Carta> mao;
+    List<Carta1> mao;
 
 //    Atributos personagem
 
@@ -18,15 +18,15 @@ public class Personagem {
 
 //    Construtor personagem
 
-    public Personagem(String nome, List<Carta> mao) {
+    public Personagem1(String nome, List<Carta1> mao) {
         this.nome = nome;
         this.mao = mao;
 
-        for(Carta carta : mao) {
+        for(Carta1 carta : mao) {
             System.out.println(carta);
         }
     }
-    public Personagem() {
+    public Personagem1() {
         this.nome = nome;
     }
 
@@ -57,7 +57,7 @@ public class Personagem {
         System.out.printf("Jogador %s\n", getNome());
         for(int i = 0; i < 6; i++){
             int dadoNumero = dado.dadoSortearCarta();
-            System.out.println(Carta.values()[dadoNumero] + "=" + dadoNumero);
+            System.out.println(Carta1.values()[dadoNumero] + "=" + dadoNumero);
         }
     }
 

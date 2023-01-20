@@ -2,7 +2,7 @@ package principal;
 
 import utils.Leitor;
 
-public enum Carta {
+public enum Carta1 {
 
     //Declaração de cada carta;
 
@@ -20,9 +20,9 @@ public enum Carta {
     TRONCO("TRONCO",35,3),
     ;
 
-    Dado dado = new Dado();
+    Dado1 dado = new Dado1();
     Leitor leitor = new Leitor();
-    Personagem personagem = new Personagem();
+    Personagem1 personagem = new Personagem1();
 
     //Atributos das cartas;
     private  String nome;
@@ -47,7 +47,7 @@ public enum Carta {
     }
 
     //Construtor;
-    Carta(String nome, int ataque, int cancheAcerto) {
+    Carta1(String nome, int ataque, int cancheAcerto) {
         this.nome = nome;
         this.ataque = ataque;
         this.cancheAcerto = cancheAcerto;
@@ -72,7 +72,7 @@ public enum Carta {
 
     public void calcularAtaque(){
         if (calcularChanceAcerto()){
-            int teste = personagem.receberDano(Carta.values()[numeroCarta].getAtaque());
+            int teste = personagem.receberDano(Carta1.values()[numeroCarta].getAtaque());
             System.out.println(teste);
             System.out.println("deu dano");
         }

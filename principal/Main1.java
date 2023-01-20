@@ -2,16 +2,16 @@ package principal;
 
 import utils.Leitor;
 
-public class Main {
+public class Main1 {
     public static void main(String[] args) {
 
         Leitor leitor = new Leitor();
-        Deck deck = new Deck();
+        Deck1 deck = new Deck1();
         String nomePersonagem = leitor.lerString("Digite seu nome");
 
-        Personagem personagem1 = new Personagem(nomePersonagem, deck.sortearMao());
+        Personagem1 personagem1 = new Personagem1(nomePersonagem, deck.sortearMao());
         System.out.println("===");
-        Personagem personagem2 = new Personagem(nomePersonagem, deck.sortearMao());
+        Personagem1 personagem2 = new Personagem1(nomePersonagem, deck.sortearMao());
 
 
     }

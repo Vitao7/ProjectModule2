@@ -2,6 +2,8 @@ package jogo;
 
 import utils.Leitor;
 
+import java.util.ArrayList;
+
 public enum Carta {
 
     //Declaração de cada carta;
@@ -50,6 +52,7 @@ public enum Carta {
         this.ataque = ataque;
         this.cancheAcerto = cancheAcerto;
     }
+    ArrayList<Carta> carta = new ArrayList<>();
 
     //toString retorna o nome da carta
 
