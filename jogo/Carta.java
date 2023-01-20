@@ -54,6 +54,7 @@ public enum Carta {
     }
     ArrayList<Carta> carta = new ArrayList<>();
 
+
     //toString retorna o nome da carta
 
     @Override

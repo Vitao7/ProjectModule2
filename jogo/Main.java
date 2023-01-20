@@ -9,10 +9,10 @@ public class Main {
         Carta carta;
         Personagem personagem = new Personagem();
         Deck deck = new Deck();
-        Painel painel = new Painel();
-        painel.setVisible(true);
-//        deck.sortearCartas();
-//        personagem.distribuirDeck();
+
+        personagem.nomearPersonagem();
+        deck.sortearCartas();
+        personagem.distribuirDeck();
 
 
 

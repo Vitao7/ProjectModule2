@@ -1,9 +1,12 @@
 package jogo;
 
+import utils.Leitor;
+
 public class Personagem {
 
-//    Deck deck = new Deck();
+    Deck mao = new Deck();
 
+    Leitor leitor = new Leitor();
 //    Atributos personagem
     private  int hp = 100;
     private int quantidadeDePersonagem = 2;
@@ -27,14 +30,20 @@ public class Personagem {
 //    Metodos
 
     public void nomearPersonagem(){
-        personagem[0] = "TORRE AZUL";
-        personagem[1] = "TORRE VERMELHA";
+        for (int i = 0; i<quantidadeDePersonagem; i++){
+            personagem[i] = leitor.lerString("Digite o nome do personagem: ");
+        }
 
 
     }
 
     public void distribuirDeck(){
-//        personagem[0] = deck.getCartasDoJogador()[0];
+        for (int j = 0; j<quantidadeDePersonagem; j++){
+            System.out.println(personagem[j]);
+            for (int t = 0; t<mao.getQuantidadeDeCartas()/quantidadeDePersonagem; t++){
+                System.out.println(mao.getCartasDoJogador());
+            }
+        }
     }
 
 

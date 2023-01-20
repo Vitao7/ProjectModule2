@@ -9,7 +9,6 @@ import javax.imageio.ImageIO;
 
 public class Painel extends JFrame{
     JButton carta1 = new JButton();
-    ImageIcon mesa = new ImageIcon(getClass().getResource("mesa.jpg"));
 
     public Painel(){
         // obtem e coloca a imagem dentro de uma BufferedImage

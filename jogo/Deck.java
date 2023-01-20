@@ -2,10 +2,12 @@ package jogo;
 
 import utils.Leitor;
 
+import java.util.Arrays;
+
 public class Deck {
     Dado dado = new Dado();
     Leitor leitor = new Leitor();
-    Personagem personagem = new Personagem();
+//    Personagem personagem = new Personagem();
     Carta carta;
 
 //    Atributos
@@ -13,11 +15,17 @@ public class Deck {
     private int cartasPorDeck = 6;
     private int quantidadeDeCartas = 12;
     private int numeroCarta;
-    private String[] cartasDoJogador = new String [quantidadeDeCartas];
+    private String[] cartasDoJogador = new String[quantidadeDeCartas];
 
     public String[] getCartasDoJogador() {
         return cartasDoJogador;
     }
+
+    public int getQuantidadeDeCartas() {
+        return quantidadeDeCartas;
+    }
+
+
 
     public void sortearCartas(){
         for (int i = 0; i<quantidadeDeCartas; i++){
@@ -40,14 +48,22 @@ public class Deck {
         }
         return false;
     }
-    public void calcularAtaque(){
-        if (calcularChanceAcerto()){
-            int teste = personagem.receberDano(Carta.values()[numeroCarta].getAtaque());
+//    public void calcularAtaque(){
+//        if (calcularChanceAcerto()){
+//            int teste = personagem.receberDano(Carta.values()[numeroCarta].getAtaque());
+//
+//        }
+//        else {
+//            System.out.println("não deu");
+//        }
+//
+//    }
 
-        }
-        else {
-            System.out.println("não deu");
-        }
 
+    @Override
+    public String toString() {
+        return "Deck{" +
+                "cartasDoJogador=" + Arrays.toString(cartasDoJogador) +
+                '}';
     }
 }
