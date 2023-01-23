@@ -7,21 +7,16 @@ public class Main {
 
         Leitor leitor = new Leitor();
         Carta carta;
-        Personagem personagem = new Personagem();
+       Personagem personagem = new Personagem();
         Deck deck = new Deck();
 
-        personagem.nomearPersonagem();
-        deck.sortearCartas();
+        //personagem.nomearPersonagem();
         personagem.distribuirDeck();
 
+       // deck.selecionarCarta();
+        //deck.calcularAtaque();
 
-
-
-
-//        carta.distribuirCartas();
-
-
-
-
+      //  personagem.nomearPersonagem();
+    //    personagem.distribuirDeck();
     }
 }

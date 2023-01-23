@@ -7,7 +7,7 @@ import java.util.Arrays;
 public class Deck {
     Dado dado = new Dado();
     Leitor leitor = new Leitor();
-//    Personagem personagem = new Personagem();
+//   Personagem personagem = new Personagem();
     Carta carta;
 
 //    Atributos
@@ -28,9 +28,9 @@ public class Deck {
 
 
     public void sortearCartas(){
-        for (int i = 0; i<quantidadeDeCartas; i++){
-            cartasDoJogador[i] = Carta.values()[dado.dadoSortearCarta()].getNome();
-            System.out.printf("%s\n", cartasDoJogador[i]);
+        for (int i = 0; i < quantidadeDeCartas; i++){
+            cartasDoJogador[cartasPorDeck] = Carta.values()[dado.dadoSortearCarta()].getNome();
+            System.out.printf("%s\n", cartasDoJogador[cartasPorDeck]);
         }
     }
 
@@ -59,11 +59,4 @@ public class Deck {
 //
 //    }
 
-
-    @Override
-    public String toString() {
-        return "Deck{" +
-                "cartasDoJogador=" + Arrays.toString(cartasDoJogador) +
-                '}';
-    }
 }

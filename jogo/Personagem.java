@@ -2,6 +2,8 @@ package jogo;
 
 import utils.Leitor;
 
+import java.util.Arrays;
+
 public class Personagem {
 
     Deck mao = new Deck();
@@ -33,19 +35,16 @@ public class Personagem {
         for (int i = 0; i<quantidadeDePersonagem; i++){
             personagem[i] = leitor.lerString("Digite o nome do personagem: ");
         }
-
-
     }
 
     public void distribuirDeck(){
         for (int j = 0; j<quantidadeDePersonagem; j++){
-            System.out.println(personagem[j]);
+            System.out.println();
             for (int t = 0; t<mao.getQuantidadeDeCartas()/quantidadeDePersonagem; t++){
                 System.out.println(mao.getCartasDoJogador());
             }
         }
     }
-
 
     public int receberDano(int dano){
         hp -= dano;
